@@ -127,8 +127,8 @@ const baseUrl = computed(() => {
 });
 
 // Widget URLs for preview
-const clockUrl = computed(() => `${baseUrl.value}/clock?theme=dark&primary=f87171&accent=fbbf24&tz=Europe/Istanbul`);
-const pomodoroUrl = computed(() => `${baseUrl.value}/pomodoro?theme=dark&primary=10b981&accent=34d399`);
+const clockUrl = computed(() => `${baseUrl.value}/#/clock?theme=dark&primary=f87171&accent=fbbf24&tz=Europe/Istanbul`);
+const pomodoroUrl = computed(() => `${baseUrl.value}/#/pomodoro?theme=dark&primary=10b981&accent=34d399`);
 
 // Embed URLs for copying
 const clockEmbedUrl = computed(() => clockUrl.value);
