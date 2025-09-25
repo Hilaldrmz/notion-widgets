@@ -1,0 +1,19 @@
+{
+    "name": "notion-widgets",
+    "version": "1.0.0",
+    "description": "Notion embed widget collection (clock, pomodoro, progress) - Vue 3 + Vite + JS + SCSS",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "vue": "^3.4.0",
+        "vue-router": "^4.3.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.5.0",
+        "vite": "^5.0.0",
+        "sass": "^1.69.0"
+    }
+}
