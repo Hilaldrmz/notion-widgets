@@ -79,7 +79,7 @@
             <div class="custom-options">
                 <div class="option">
                     <strong>Example URL:</strong>
-                    <code>https://your-username.github.io/notion-widgets/clock?theme=dark&primary=f87171</code>
+                    <code>https://hilaldrmz.github.io/notion-widgets/clock?theme=dark&primary=f87171</code>
                 </div>
                 <div class="option">
                     <strong>Theme:</strong> <code>?theme=dark</code> or <code>?theme=light</code>
