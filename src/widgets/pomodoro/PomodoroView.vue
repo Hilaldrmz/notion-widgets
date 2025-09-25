@@ -2,9 +2,9 @@
     <div class="widget pomodoro-widget" :class="phaseClass">
         <!-- Progress Ring -->
         <div class="progress-ring">
-            <svg class="progress-svg" width="200" height="200">
-                <circle cx="100" cy="100" r="90" class="progress-bg" />
-                <circle cx="100" cy="100" r="90" class="progress-fill" :style="{ strokeDashoffset: progressOffset }" />
+            <svg class="progress-svg" width="260" height="260">
+                <circle cx="130" cy="130" r="120" class="progress-bg" />
+                <circle cx="130" cy="130" r="120" class="progress-fill" :style="{ strokeDashoffset: progressOffset }" />
             </svg>
 
             <!-- Center Content -->
@@ -35,14 +35,7 @@
 
         <!-- Modern Control Buttons -->
         <div class="modern-controls">
-            <button class="modern-btn secondary" @click="showSettings = !showSettings"
-                :class="{ active: showSettings }">
-                <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path fill="currentColor"
-                        d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11.03L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11.03C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
-                </svg>
-                Settings
-            </button>
+            
 
             <button class="modern-btn primary" @click="toggle" :class="{ playing: isRunning }">
                 <svg v-if="!isRunning" viewBox="0 0 24 24" width="20" height="20">
@@ -67,6 +60,15 @@
                         d="M12,6V9L16,5L12,1V4A8,8 0 0,0 4,12C4,13.57 4.46,15.03 5.24,16.26L6.7,14.8C6.25,13.97 6,13 6,12A6,6 0 0,1 12,6M18.76,7.74L17.3,9.2C17.74,10.04 18,11 18,12A6,6 0 0,1 12,18V15L8,19L12,23V20A8,8 0 0,0 20,12C20,10.43 19.54,8.97 18.76,7.74Z" />
                 </svg>
                 Reset
+            </button>
+            
+            <button class="modern-btn secondary" @click="showSettings = !showSettings"
+                :class="{ active: showSettings }">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path fill="currentColor"
+                        d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11.03L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11.03C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                </svg>
+                Settings
             </button>
         </div>
 
@@ -231,7 +233,7 @@ const progressOffset = computed(() => {
     else total = longBreakSec.value;
 
     const progress = (total - remaining.value) / total;
-    const circumference = 2 * Math.PI * 90; // radius = 90
+    const circumference = 2 * Math.PI * 120; // radius = 120
     return circumference - (progress * circumference);
 });
 
@@ -335,7 +337,7 @@ function skipPhase() {
 }
 
 onMounted(() => {
-    document.body.style.minHeight = '300px';
+    document.body.style.minHeight = '160px';
     timer = setInterval(() => {
         if (isRunning.value) tick();
     }, 1000);
@@ -355,15 +357,15 @@ function onKey(e) {
 
 <style lang="scss" scoped>
 .pomodoro-widget {
-    min-height: 280px;
+    min-height: 320px;
     width: min-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5em;
-    border-radius: 20px;
-    padding: 1.5rem;
+    gap: 2em;
+    border-radius: 24px;
+    padding: 2rem;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(20px);
@@ -426,7 +428,7 @@ function onKey(e) {
             stroke: var(--primary-color);
             stroke-width: 4;
             stroke-linecap: round;
-            stroke-dasharray: 565; // 2π * 90
+            stroke-dasharray: 754; // 2π * 120
             transition: stroke-dashoffset 1s ease-in-out;
             filter: drop-shadow(0 0 8px var(--primary-color));
         }
@@ -531,6 +533,8 @@ function onKey(e) {
     .modern-controls {
         display: flex;
         align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 0.75rem;
 
         .modern-btn {

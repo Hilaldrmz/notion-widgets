@@ -29,7 +29,7 @@
             <!-- Pomodoro Widget -->
             <div class="widget-card">
                 <div class="widget-preview">
-                    <iframe :src="pomodoroUrl" width="300" height="340" frameborder="0" scrolling="no">
+                    <iframe :src="pomodoroUrl" width="320" height="380" frameborder="0" scrolling="no">
                     </iframe>
                 </div>
                 <div class="widget-info">
