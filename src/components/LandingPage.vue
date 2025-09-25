@@ -29,7 +29,7 @@
             <!-- Pomodoro Widget -->
             <div class="widget-card">
                 <div class="widget-preview">
-                    <iframe :src="pomodoroUrl" width="320" height="380" frameborder="0" scrolling="no">
+                    <iframe :src="pomodoroUrl" width="300" height="340" frameborder="0" scrolling="no">
                     </iframe>
                 </div>
                 <div class="widget-info">
@@ -78,7 +78,7 @@
             <h2>🎨 Customization</h2>
             <div class="custom-options">
                 <div class="option">
-                    <strong>Example URL:</strong> 
+                    <strong>Example URL:</strong>
                     <code>https://your-username.github.io/notion-widgets/clock?theme=dark&primary=f87171</code>
                 </div>
                 <div class="option">
@@ -113,13 +113,13 @@ const baseUrl = computed(() => {
     if (typeof window !== 'undefined') {
         const origin = window.location.origin;
         const pathname = window.location.pathname;
-        
+
         // GitHub Pages: https://hilaldrmz.github.io/notion-widgets/
         // Remove trailing slash and any current route
         if (pathname.includes('/notion-widgets')) {
             return `${origin}/notion-widgets`;
         }
-        
+
         // Local development: http://localhost:5173/
         return origin;
     }

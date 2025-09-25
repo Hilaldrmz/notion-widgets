@@ -2,9 +2,9 @@
     <div class="widget pomodoro-widget" :class="phaseClass">
         <!-- Progress Ring -->
         <div class="progress-ring">
-            <svg class="progress-svg" width="260" height="260">
-                <circle cx="130" cy="130" r="120" class="progress-bg" />
-                <circle cx="130" cy="130" r="120" class="progress-fill" :style="{ strokeDashoffset: progressOffset }" />
+            <svg class="progress-svg" width="200" height="200">
+                <circle cx="100" cy="100" r="90" class="progress-bg" />
+                <circle cx="100" cy="100" r="90" class="progress-fill" :style="{ strokeDashoffset: progressOffset }" />
             </svg>
 
             <!-- Center Content -->
@@ -231,7 +231,7 @@ const progressOffset = computed(() => {
     else total = longBreakSec.value;
 
     const progress = (total - remaining.value) / total;
-    const circumference = 2 * Math.PI * 120; // radius = 120
+    const circumference = 2 * Math.PI * 90; // radius = 90
     return circumference - (progress * circumference);
 });
 
@@ -335,7 +335,7 @@ function skipPhase() {
 }
 
 onMounted(() => {
-    document.body.style.minHeight = '160px';
+    document.body.style.minHeight = '300px';
     timer = setInterval(() => {
         if (isRunning.value) tick();
     }, 1000);
@@ -355,15 +355,15 @@ function onKey(e) {
 
 <style lang="scss" scoped>
 .pomodoro-widget {
-    min-height: 320px;
+    min-height: 280px;
     width: min-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2em;
-    border-radius: 24px;
-    padding: 2rem;
+    gap: 1.5em;
+    border-radius: 20px;
+    padding: 1.5rem;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(20px);
@@ -426,7 +426,7 @@ function onKey(e) {
             stroke: var(--primary-color);
             stroke-width: 4;
             stroke-linecap: round;
-            stroke-dasharray: 754; // 2π * 120
+            stroke-dasharray: 565; // 2π * 90
             transition: stroke-dashoffset 1s ease-in-out;
             filter: drop-shadow(0 0 8px var(--primary-color));
         }
