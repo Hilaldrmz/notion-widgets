@@ -5,6 +5,10 @@ import path from 'path';
 export default defineConfig({
     plugins: [vue()],
     base: process.env.NODE_ENV === 'production' ? '/notion-widgets/' : '/',
+    build: {
+        outDir: 'docs',
+        emptyOutDir: true,
+    },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),

@@ -1,5 +1,6 @@
 node_modules/
-dist/
+# Docs folder is used for GitHub Pages deployment
+# dist
 .env*
 .DS_Store
 .vscode/
