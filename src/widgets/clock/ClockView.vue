@@ -334,6 +334,8 @@ onUnmounted(() => clearInterval(timer));
     max-height: 80vh;
     overflow: hidden;
     color: #333;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-header {
@@ -375,8 +377,26 @@ onUnmounted(() => clearInterval(timer));
 
 .modal-body {
     padding: 1.5rem;
-    max-height: var(--height);
+    flex: 1;
     overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c2c2c2;
+        border-radius: 3px;
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+        scrollbar-color: #e29d80 transparent;
+    }
 }
 
 .setting-group {
@@ -429,11 +449,12 @@ onUnmounted(() => clearInterval(timer));
 }
 
 .modal-footer {
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     gap: 1rem;
     justify-content: center;
+    flex-shrink: 0;
 
     button {
         padding: 0.5rem 1.5rem;
